@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - NEAT Lab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .research-page {
+            padding-top: 100px;
+        }
+        
+        .research-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .research-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .research-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .research-section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .research-section:last-child {
+            border-bottom: none;
+        }
+        
+        .research-section:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .research-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .research-title {
+            font-size: 2.2rem;
+            color: #333;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .research-icon {
+            font-size: 2.5rem;
+        }
+        
+        .research-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 1.5rem;
+        }
+        
+        .collaboration-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .external-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .external-link:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .research-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>NEAT Lab</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="research.html" class="nav-link active">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a href="people.html" class="nav-link">People</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="research-page">
+        <section class="research-header">
+            <div class="container">
+                <h1>Our Research</h1>
+                <p>Investigating how the brain controls physical activity and thermogenesis in skeletal muscle</p>
+            </div>
+        </section>
+
+        <!-- Muscle Thermogenesis -->
+        <section class="research-section">
+            <div class="research-content">
+                <h2 class="research-title">
+                    <span class="research-icon">🔥</span>
+                    Muscle Thermogenesis
+                </h2>
+                
+                <p class="research-text">
+                    We investigate how the brain modulates thermogenesis in skeletal muscle. We have shown that exposure to predator threat (e.g., the odor of a ferret) causes a fast increase in the temperature of skeletal muscle in mice and rats. Moreover, the rats also burn ~40% more calories to fuel the thermogenesis.
+                </p>
+                
+                <div class="highlight-box">
+                    <p class="research-text">
+                        <strong>Key Finding:</strong> Exposure to predator threat causes muscle sarco/endoplasmic reticulum calcium ATPase (SERCA) to decrease efficiency, where energy is dissipated as heat from the muscle.
+                    </p>
+                </div>
+                
+                <p class="research-text">
+                    Within the brain, we have found that chemogenetic activation of steroidogenic factor-1 (SF1) neurons in the ventromedial hypothalamus (VMH) enhances muscle thermogenesis in mice. The sympathetic nervous system (SNS) is critical for communicating the predator threat to skeletal muscles as either pharmacologically blocking beta-adrenergic receptors or unilateral surgical denervation will dampen muscle thermogenic response to ferret odor.
+                </p>
+                
+                <p class="research-text">
+                    Currently, we are investigating the importance of AMP kinase (AMPK) in the ability of the VMH to stimulate muscle thermogenesis. We are also probing which cell populations within the VMH are activated after predator-threat exposure. We are also examining the active kinome in response to predator threat, focusing on both the VMH and muscle during thermogenic activation.
+                </p>
+                
+                <p class="research-text">
+                    <a href="https://www.utoledo.edu/med/research/icf/kinome-lab.html" target="_blank" class="external-link">
+                        Learn more about kinome analysis <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </p>
+                
+                <div class="research-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">~40%</span>
+                        <div class="stat-label">Increased calorie burn during thermogenesis</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">SF1</span>
+                        <div class="stat-label">Key neurons in VMH</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collaboration: FGF-21 -->
+        <section class="research-section">
+            <div class="research-content">
+                <div class="collaboration-tag">
+                    <i class="fas fa-handshake"></i> Collaboration with Mintz Lab
+                </div>
+                <h2 class="research-title">
+                    <span class="research-icon">⏰</span>
+                    FGF-21 and Circadian Rhythms
+                </h2>
+                
+                <p class="research-text">
+                    In collaboration with the Mintz lab at KSU, we are investigating fibroblast growth factor-21 (FGF-21) in the primary mammalian circadian clock, the suprachiasmatic nucleus (SCN).
+                </p>
+            </div>
+        </section>
+
+        <!-- Collaboration: Prenatal Microcystin -->
+        <section class="research-section">
+            <div class="research-content">
+                <div class="collaboration-tag">
+                    <i class="fas fa-handshake"></i> Collaboration with Chung Lab
+                </div>
+                <h2 class="research-title">
+                    <span class="research-icon">🦠</span>
+                    Prenatal Microcystin Exposure
+                </h2>
+                
+                <p class="research-text">
+                    Microcystin is a toxin released by cyanobacteria during harmful algal blooms (HAB) in Lake Erie. In collaboration with the Chung lab at KSU, we are investigating how low-level exposure to the toxin microcystin alters brain development in mice, specifically its potential impact on energy balance in adulthood.
+                </p>
+                
+                <div class="highlight-box">
+                    <p class="research-text">
+                        <strong>Environmental Impact:</strong> This research addresses the growing concern of harmful algal blooms in Lake Erie and their potential long-term effects on mammalian development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Melanocortin Receptors -->
+        <section class="research-section">
+            <div class="research-content">
+                <h2 class="research-title">
+                    <span class="research-icon">🔬</span>
+                    Melanocortin Receptors
+                </h2>
+                
+                <p class="research-text">
+                    The leptin-melanocortin system is of primary importance for the modulation of energy balance. Genetic mutations within this system can cause monogenic human obesity. We have identified differences in melanocortin receptors—MC3R, MC4R, and MC5R—within the brains of lean, physically active rats compared with their less active, obesity-prone counterparts.
+                </p>
+                
+                <p class="research-text">
+                    While activating these receptors in the VMH of the brain increases muscle thermogenesis, we see no decrement in thermogenesis in obese rats lacking MC4R.
+                </p>
+                
+                <div class="research-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">MC3R</span>
+                        <div class="stat-label">Melanocortin receptor 3</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">MC4R</span>
+                        <div class="stat-label">Melanocortin receptor 4</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">MC5R</span>
+                        <div class="stat-label">Melanocortin receptor 5</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intermittent Fasting -->
+        <section class="research-section">
+            <div class="research-content">
+                <h2 class="research-title">
+                    <span class="research-icon">🏃‍♂️</span>
+                    Intermittent Fasting and Fitness
+                </h2>
+                
+                <p class="research-text">
+                    Rats with high intrinsic aerobic fitness are more physically active and have higher muscle thermogenesis during activity compared to low-capacity runners. The high-fitness rats also have higher metabolic rate, stemming primarily from their energy expenditure of activity.
+                </p>
+                
+                <div class="highlight-box">
+                    <p class="research-text">
+                        <strong>Surprising Finding:</strong> On 50% food restriction, the high-fitness rats lose significantly more weight for their size. Interestingly, though, the low-fitness rats consistently lose more weight on intermittent fasting.
+                    </p>
+                </div>
+                
+                <p class="research-text">
+                    The high-fitness rats show a greater energetic adaptation to alternate-day fasting, suppressing their physical activity and metabolic rate, especially on fasting days. This research reveals important interactions between fitness level, metabolic flexibility, and different dietary interventions.
+                </p>
+                
+                <div class="research-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50%</span>
+                        <div class="stat-label">Food restriction level</div>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Higher</span>
+                        <div class="stat-label">Metabolic rate in fit rats</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NEAT Lab, Kent State University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

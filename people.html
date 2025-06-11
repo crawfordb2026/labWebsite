@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People - NEAT Lab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .people-page {
+            padding-top: 100px;
+        }
+        
+        .people-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .people-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .people-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .people-section {
+            padding: 60px 0;
+        }
+        
+        .people-section:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .pi-card {
+            max-width: 600px;
+            margin: 0 auto 4rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 3rem;
+        }
+        
+        .pi-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+        
+        .pi-name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .pi-title {
+            font-size: 1.3rem;
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .pi-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info i {
+            color: #667eea;
+            width: 20px;
+        }
+        
+        .people-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .person-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .person-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .person-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .person-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .person-role {
+            color: #666;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .person-details {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .year-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .alumni-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .alumni-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .alumni-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid #667eea;
+        }
+        
+        .alumni-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .alumni-graduation {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .alumni-current {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        .subsection-title {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>NEAT Lab</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="research.html" class="nav-link">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a href="people.html" class="nav-link active">People</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="people-page">
+        <section class="people-header">
+            <div class="container">
+                <h1>Our Team</h1>
+                <p>Meet the researchers advancing neuroscience and metabolism</p>
+            </div>
+        </section>
+
+        <!-- Principal Investigator -->
+        <section class="people-section">
+            <div class="container">
+                <h2 class="section-title">Principal Investigator</h2>
+                <div class="pi-card">
+                    <div class="pi-avatar">
+                        👩‍🔬
+                    </div>
+                    <h3 class="pi-name">Colleen M Novak</h3>
+                    <p class="pi-title">Professor & Principal Investigator</p>
+                    <div class="pi-contact">
+                        <div class="contact-info">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:cnovak13@kent.edu" style="color: #667eea; text-decoration: none;">cnovak13@kent.edu</a>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-phone"></i>
+                            <span>330-672-2306 (office)</span>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>507-319-0040 (mobile)</span>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-clock"></i>
+                            <span>Office Hours: 8-9 AM most weekdays</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Graduate Students -->
+        <section class="people-section">
+            <div class="container">
+                <h2 class="section-title">Current Lab Members</h2>
+                
+                <h3 class="subsection-title">Graduate Students</h3>
+                <div class="people-grid">
+                    <div class="person-card">
+                        <div class="person-avatar">SB</div>
+                        <div class="year-badge">2023</div>
+                        <h4 class="person-name">Simon Bagatto</h4>
+                        <p class="person-role">Master's Student</p>
+                    </div>
+                    
+                    <div class="person-card">
+                        <div class="person-avatar">NJ</div>
+                        <div class="year-badge">2024</div>
+                        <h4 class="person-name">Nusrat Jahan</h4>
+                        <p class="person-role">Doctoral Student</p>
+                    </div>
+                    
+                    <div class="person-card">
+                        <div class="person-avatar">CB</div>
+                        <div class="year-badge">2025</div>
+                        <h4 class="person-name">Christopher Blank</h4>
+                        <p class="person-role">Doctoral Student</p>
+                    </div>
+                </div>
+
+                <h3 class="subsection-title">Undergraduate Students</h3>
+                <div class="people-grid">
+                    <div class="person-card">
+                        <div class="person-avatar">LB</div>
+                        <h4 class="person-name">Leah Brenneman</h4>
+                        <p class="person-role">Laboratory Technician</p>
+                        <p class="person-details">Neuroscience major</p>
+                    </div>
+                    
+                    <div class="person-card">
+                        <div class="person-avatar">MS</div>
+                        <h4 class="person-name">Madelynn Spicuzza</h4>
+                        <p class="person-role">Summer 2025 SURE Student</p>
+                        <p class="person-details">Biochemistry major</p>
+                    </div>
+                    
+                    <div class="person-card">
+                        <div class="person-avatar">JB</div>
+                        <h4 class="person-name">Justin Barzellato</h4>
+                        <p class="person-role">Summer 2025 SURE Student</p>
+                        <p class="person-details">Biological Sciences, Premed major</p>
+                    </div>
+                    
+                    <div class="person-card">
+                        <div class="person-avatar">SC</div>
+                        <h4 class="person-name">Sonia Chirravuri</h4>
+                        <p class="person-role">Individual Investigation</p>
+                        <p class="person-details">Neuroscience major</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lab Alumni -->
+        <section class="alumni-section">
+            <div class="container">
+                <h2 class="section-title">Lab Alumni</h2>
+                <div class="alumni-grid">
+                    <div class="alumni-card">
+                        <h4 class="alumni-name">Emily Welch</h4>
+                        <p class="alumni-graduation">June 2025</p>
+                        <p class="alumni-current">Currently postdoctoral associate at Case Western Reserve University</p>
+                    </div>
+                    
+                    <div class="alumni-card">
+                        <h4 class="alumni-name">Christina Watts</h4>
+                        <p class="alumni-graduation">April 2023</p>
+                        <p class="alumni-current">Currently at the University of Washington, Morton Lab, Dick and Julia McAbee Postdoctoral Fellow</p>
+                    </div>
+                    
+                    <div class="alumni-card">
+                        <h4 class="alumni-name">Lydia Heemstra</h4>
+                        <p class="alumni-graduation">July 2021 (MS: March 2016)</p>
+                        <p class="alumni-current">Currently in the laboratory of Dr. Melissa K. Edler in the Department of Anthropology at Kent State University</p>
+                    </div>
+                    
+                    <div class="alumni-card">
+                        <h4 class="alumni-name">Erin Gorrell</h4>
+                        <p class="alumni-graduation">October 2020</p>
+                        <p class="alumni-current">Currently Clinical Research Regulatory Project Manager at University Hospitals</p>
+                    </div>
+                    
+                    <div class="alumni-card">
+                        <h4 class="alumni-name">Ashley Davis (Gamble)</h4>
+                        <p class="alumni-graduation">October 2020</p>
+                        <p class="alumni-current">Currently Science Writer at Amplity Health</p>
+                    </div>
+                    
+                    <div class="alumni-card">
+                        <h4 class="alumni-name">Ashley Shemery, PhD</h4>
+                        <p class="alumni-graduation">February 2020</p>
+                        <p class="alumni-current">Currently Clinical Trial Manager at Medpace</p>
+                    </div>
+                    
+                    <div class="alumni-card">
+                        <h4 class="alumni-name">Mark E Smyers, PhD</h4>
+                        <p class="alumni-graduation">July 2019</p>
+                        <p class="alumni-current">Currently Adjunct Professor at Stark State College</p>
+                    </div>
+                    
+                    <div class="alumni-card">
+                        <h4 class="alumni-name">Jesse Kowalski, MS</h4>
+                        <p class="alumni-graduation">October 2018</p>
+                        <p class="alumni-current">Currently working in research at Nationwide Children's Hospital</p>
+                    </div>
+                    
+                    <div class="alumni-card">
+                        <h4 class="alumni-name">Sromona Mukherjee, PhD</h4>
+                        <p class="alumni-graduation">October 2015</p>
+                        <p class="alumni-current">Currently Medical Science Liaison at Travere Therapeutics</p>
+                    </div>
+                    
+                    <div class="alumni-card">
+                        <h4 class="alumni-name">Tariq I Almundarij, PhD</h4>
+                        <p class="alumni-graduation">November 2015</p>
+                        <p class="alumni-current">Currently at Qassim University</p>
+                    </div>
+                    
+                    <div class="alumni-card">
+                        <h4 class="alumni-name">Chaitanya K Gavini, PhD</h4>
+                        <p class="alumni-graduation">August 2015</p>
+                        <p class="alumni-current">Currently a Premier Assistant at The University of Lausanne - UNIL</p>
+                    </div>
+                    
+                    <div class="alumni-card">
+                        <h4 class="alumni-name">Charu Shukla (Reddy), PhD</h4>
+                        <p class="alumni-graduation">April 2014</p>
+                        <p class="alumni-current">Currently Principal Scientist, Preclinical, at Junevity</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NEAT Lab, Kent State University. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
