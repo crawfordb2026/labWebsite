@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - NEAT Lab</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .publications-page {
+            padding-top: 100px;
+        }
+        
+        .publications-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .publications-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .publications-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        
+        .publications-section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .publications-section:last-child {
+            border-bottom: none;
+        }
+        
+        .publications-section:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .publications-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .section-title:hover {
+            background: #e9ecef;
+        }
+        
+        .section-title i {
+            transition: transform 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .section-title.collapsed i {
+            transform: rotate(-90deg);
+        }
+        
+        .publication-list {
+            display: none;
+            margin-bottom: 2rem;
+            padding: 0 1rem;
+        }
+        
+        .publication-list.active {
+            display: block;
+        }
+        
+        .publication {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .publication:hover {
+            transform: translateY(-2px);
+        }
+        
+        .publication p {
+            color: #333;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        
+        .publication-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+        
+        .publication-link:hover {
+            text-decoration: underline;
+        }
+        
+        .publication-link i {
+            margin-left: 0.3rem;
+            font-size: 0.8rem;
+        }
+        
+        .publication-card {
+            margin-top: 1rem;
+        }
+        
+        .publication-card h3 {
+            display: none;
+        }
+
+        .scholar-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid white;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .scholar-link:hover {
+            background: white;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>NEAT Lab</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="research.html" class="nav-link">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a href="people.html" class="nav-link">People</a>
+                </li>
+                <li class="nav-item">
+                    <a href="publications.html" class="nav-link active">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a href="people.html#pi" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="publications-page">
+        <section class="publications-header">
+            <div class="container">
+                <h1>Publications</h1>
+                <p>Our research contributions to neuroscience and metabolism</p>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="scholar-link">
+                    <i class="fas fa-graduation-cap"></i> View Google Scholar Profile
+                </a>
+            </div>
+        </section>
+
+        <section class="publications-section" id="muscle-thermogenesis">
+            <div class="publications-content">
+                <h2 class="section-title">
+                    <i class="fas fa-chevron-down"></i>
+                    Brain control of muscle thermogenesis & physical activity
+                </h2>
+                <div class="publication-card">
+                    <h3>Muscle Thermogenesis</h3>
+                    <div class="publication-list">
+                        <div class="publication">
+                            <p>Shemery AM, Gibson M, Gorrell E, Daniel D, Piontkivska H, Novak CM (2024) RNA-sequencing reveals altered gene expression in the ventromedial hypothalamus following predator odor exposure. F1000 Research. doi.org/10.12688/f1000research.152034.1</p>
+                            <a href="https://f1000research.com/articles/13-648" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Watts CA, Smith J, Giacomino R, Walter D, Jang G, Malik A, Harvey N, Novak CM (2024) Chemogenetic excitation of ventromedial hypothalamic steroidogenic factor 1 (SF1) neurons increases muscle thermogenesis in mice. Biomolecules;14(7):821. (PMID: 39062535; doi: 10.3390/biom14070821)</p>
+                            <a href="https://www.mdpi.com/2218-273X/14/7/821" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Shemery AM, Zendlo M, Kowalski J, Gorrell E, Everett S, Wagner JG, Davis AE, Koch LG, Britton SL, Mul JD, and Novak CM (2023) Reduced contextually induced muscle thermogenesis in rats with calorie restriction and lower aerobic fitness but not monogenic obesity. Temperature (Austin); 10 (3): 379-393. (PMID: 37554387; doi: 10.1080/23328940.2023.2171669)</p>
+                            <a href="https://www.tandfonline.com/doi/epdf/10.1080/23328940.2023.2171669?needAccess=true" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Heemstra LA, Koch LG, Britton SL, Novak CM (2022) Altered skeletal muscle SERCA calcium transport efficiency following a thermogenic stimulus. American Journal of Physiology: Regulatory, Integrative and Comparative Physiology, 323 (5): R628-637. (PMID: 36094445; doi: 10.1152/ajpregu.00173.2022)</p>
+                            <a href="https://journals.physiology.org/doi/epdf/10.1152/ajpregu.00173.2022" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Watts CW, Haupt A, Smith J, Welch E, Malik A, Giacomino R, Walter D, Mavundza N, Shemery A, Caldwell HK, Novak CM (2022) Measuring Skeletal muscle thermogenesis in mice and rats. Journal of Visualized Experiments. (doi: 10.3791/64264)</p>
+                            <a href="https://app.jove.com/t/64264/measuring-skeletal-muscle-thermogenesis-in-mice-and-rats" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Gorrell E, Shemery A, Kowalski J, Bodziony M, Mavundza N, Titus AR, Yoder M, Mull S, Heemstra LA, Wagner JG, Gibson M, Carey O, Daniel D, Harvey N, Zendlo M, Rich M, Everett S, Gavini CK, Almundarij TI, Lorton D, Novak CM (2020) Skeletal muscle thermogenesis induction by exposure to predator odor. Journal of Experimental Biology, 223 (Pt 8): pii: jeb218479. (PMID: 32165434; doi: 10.1242/jeb.218479)</p>
+                            <a href="https://journals.biologists.com/jeb/article-abstract/223/8/jeb218479/223836/Skeletal-muscle-thermogenesis-induction-by?redirectedFrom=fulltext" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Clark KS, Coleman C, Shelton R, Heemstra LA, and Novak CM (2019) Caffeine enhances activity thermogenesis and energy expenditure in rats. Clinical and Experimental Pharmacology and Physiology, 46 (5): 475-482. (PMID: 30620415; PMCID: PMC6467726; doi: 10.1111/1440-1681.13065)</p>
+                            <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/1440-1681.13065" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="publications-section" id="aerobic-fitness">
+            <div class="publications-content">
+                <h2 class="section-title">
+                    <i class="fas fa-chevron-down"></i>
+                    Aerobic fitness, metabolism, and intermittent fasting
+                </h2>
+                <div class="publication-card">
+                    <h3>Aerobic Fitness and Metabolism</h3>
+                    <div class="publication-list">
+                        <div class="publication">
+                            <p>Davis AE, Smyers ME, Beltz L, Mehta DM, Britton SL, Koch LG, and Novak CM (2021) Differential weight loss with intermittent fasting or daily calorie restriction in low- and high-fitness phenotypes. Experimental Physiology, 106 (8):1731-1742. (PMID: 34086376; doi: 10.1113/EP089434)</p>
+                            <a href="https://physoc.onlinelibrary.wiley.com/doi/epdf/10.1113/EP089434" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Smyers ME, Koch LG, Britton SL, Wagner JG, Novak CM (2021) Enhanced weight and fat loss from long-term intermittent fasting in obesity-prone, low-fitness rats. Physiology & Behavior, 230: 113280. (PMID: 33285179; doi: 10.1016/j.physbeh.2020.113280)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0031938420305941?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Mukherjee S, Koch KG, Britton SL, and Novak CM (2020) Aerobic capacity modulates adaptive thermogenesis: Contribution of non-resting energy expenditure. Physiology & Behavior, 225: 113048 (PMID: 32628949; doi: 10.1016/j.physbeh.2020.113048)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0031938420303620?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Gavini CK, Britton SL, Koch LG, and Novak CM (2018) Inherently lean rats have enhanced activity and skeletal muscle response to central melanocortin receptors. Obesity (Silver Spring), 26 (5): 885-894. (PMID: 29566460; doi: 10.1002/oby.22166)</p>
+                            <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/oby.22166" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Smyers ME, Bachir KZ, Britton SL, Koch LG, and Novak CM (2015) Physically active rats lose more weight during calorie restriction. Physiology & Behavior, 139C: 303-313. (PMID: 25449411)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0031938414005629?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Gavini CK, Mukherjee S, Shukla C, Britton SL, Koch LG, and Novak CM (2014) Leanness and heightened non-resting energy expenditure: Role of skeletal muscle activity thermogenesis. American Journal of Physiology: Endocrinology and Metabolism, 306 (6): E635-647. (PMID: 24398400)</p>
+                            <a href="https://journals.physiology.org/doi/epdf/10.1152/ajpendo.00555.2013" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM, Escande C, Burghardt P, Zhang M, Barbosa MT, Chini EN, Britton SL, Koch LG, Akil H, and Levine JA (2010) Spontaneous activity, economy of activity, and resistance to diet-induced obesity in rats bred for high intrinsic aerobic capacity. Hormones and Behavior, 58 (3): 355-367 (Special Commentary highlights publication: Hormones and Behavior, 58 (3): 353-354). (PMID: 20350549)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0018506X10000681?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM, Jiang X, Wang C, Teske JA, Kotz CM, Levine JA (2005) caloric restriction and physical activity in zebrafish (Danio rerio). Neuroscience Letters, 383 (102): 99-104. (PMID: 15936519)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S030439400500354X?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="publications-section" id="melanocortin-receptors">
+            <div class="publications-content">
+                <h2 class="section-title">
+                    <i class="fas fa-chevron-down"></i>
+                    Melanocortin receptors
+                </h2>
+                <div class="publication-card">
+                    <h3>Melanocortin Receptors</h3>
+                    <div class="publication-list">
+                        <div class="publication">
+                            <p>Shemery AM, Zendlo M, Kowalski J, Gorrell E, Everett S, Wagner JG, Davis AE, Koch LG, Britton SL, Mul JD, and Novak CM (2023) Reduced contextually induced muscle thermogenesis in rats with calorie restriction and lower aerobic fitness but not monogenic obesity. Temperature (Austin); 10 (3): 379-393. (PMID: 37554387; doi: 10.1080/23328940.2023.2171669)</p>
+                            <a href="https://www.tandfonline.com/doi/epdf/10.1080/23328940.2023.2171669?needAccess=true" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Gavini CK, Britton SL, Koch LG, and Novak CM (2018) Inherently lean rats have enhanced activity and skeletal muscle response to central melanocortin receptors. Obesity (Silver Spring), 26 (5): 885-894. (PMID: 29566460; doi: 10.1002/oby.22166)</p>
+                            <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/oby.22166" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Almundarij TA, Gavini CK, Novak CM (2017) Suppressed sympathetic outflow to skeletal muscle, muscle thermogenesis, and activity energy expenditure with calorie restriction. Physiological Reports, 5 (4) pii: e13171. (PMID: 28242830; PMC5328781; doi: 10.14814/phy2.13171)</p>
+                            <a href="https://physoc.onlinelibrary.wiley.com/doi/epdf/10.14814/phy2.13171" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Almundarij TI, Smyers ME, Spriggs A, Heemstra LA, Beltz L, Dyne E, Ridenour C, Novak CM (2016) Physical activity, energy expenditure, and defense of body weight in melanocortin 4 receptor-deficient male rats. Scientific Reports, 6: 37435. (PMID: 27886210; doi: 10.1038/srep37435)</p>
+                            <a href="https://www.nature.com/articles/srep37435" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Gavini CK, Jones WC, and Novak CM (2016) Ventromedial hypothalamic melanocortin receptor activation: Regulation of activity energy expenditure and skeletal muscle thermogenesis. Journal of Physiology, 594 (18): 5285-5301. (PMID: 27126579; doi: 10.1113/JP272352)</p>
+                            <a href="https://physoc.onlinelibrary.wiley.com/doi/epdf/10.1113/JP272352" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Shukla C, Koch LG, Britton SL, Cai M, Hruby VJ, Bednarek M, and Novak CM (2015) Contribution of regional brain melanocortin receptor subtypes to elevated activity energy expenditure in lean, active rats. Neuroscience, 310: 252-267. (PMID: 26404873)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0306452215008544?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Shukla C, Britton SL, Koch LG, and Novak CM (2012) Region-specific differences in brain melanocortin receptors in rats of the lean phenotype. Neuroreport, 11 (10): 596-600. (PMID: 22643233)</p>
+                            <a href="https://journals.lww.com/neuroreport/abstract/2012/07110/region_specific_differences_in_brain_melanocortin.4.aspx" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="publications-section" id="reviews-methods">
+            <div class="publications-content">
+                <h2 class="section-title">
+                    <i class="fas fa-chevron-down"></i>
+                    Reviews, commentaries, and methods
+                </h2>
+                <div class="publication-card">
+                    <h3>Reviews, Commentaries, and Methods</h3>
+                    <div class="publication-list">
+                        <div class="publication">
+                            <p>Watts CW, Haupt A, Smith J, Welch E, Malik A, Giacomino R, Walter D, Mavundza N, Shemery A, Caldwell HK, Novak CM (2022) Measuring Skeletal muscle thermogenesis in mice and rats. Journal of Visualized Experiments. (doi: 10.3791/64264)</p>
+                            <a href="https://app.jove.com/t/64264/measuring-skeletal-muscle-thermogenesis-in-mice-and-rats" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Nixon JP, Kotz CM, Novak CM, Billington CJ, Teske JA. (2012) Neuropeptides controlling energy balance: orexins and neuromedins (Review). Handbook of Experimental Pharmacology: Appetite Control, 209: 77-109. (PMID: 22249811)</p>
+                            <a href="https://link.springer.com/chapter/10.1007/978-3-642-24716-3_4" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM and Gavini CK (2012) Smokeless weight loss. Diabetes, 61(4): 776-7. (PMID: 22442297)</p>
+                            <a href="https://diabetesjournals.org/diabetes/article/61/4/776/15845/Smokeless-Weight-Loss" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM, Burghardt PR, and Levine JA. (2011) Running wheel activity in rodents: Relationship to energy balance, general activity, and reward. Neuroscience and Biobehavioral Reviews, 36 (3):1001-14. (PMID: 22230703)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0149763411002193?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Nixon JP, Zhang M, Wang C, Kuskowski M, Novak CM, Levine JA, Billington CJ, and Kotz CM. (2010) Evaluation of a quantitative magnetic resonance imaging system for whole body composition analysis in rodents. Obesity, 18 (8): 1652-1659. (PMID: 20057373)</p>
+                            <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1038/oby.2009.471" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM Invited "News and Views" contribution: NeuromedinS and U (2009) Endocrinology, 150 (7): 2985-2987. (PMID: 19547373)</p>
+                            <a href="https://academic.oup.com/endo/article/150/7/2985/2456016?login=true" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM, Ehlen JC, and Albers HE. (2008) Invited Review: Photic and nonphotic inputs to the diurnal circadian clock. Biological Rhythm Research, 39 (3): 291-304.</p>
+                            <a href="https://www.tandfonline.com/doi/abs/10.1080/09291010701683482" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM and Levine, JA (2007) Review: Central neural and endocrine mechanisms of non-exercise activity thermogenesis and their potential impact on obesity. Journal of Neuroendocrinology, 19 (12): 923-40. (PMID: 18001322)</p>
+                            <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1365-2826.2007.01606.x" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="publications-section" id="collaborations">
+            <div class="publications-content">
+                <h2 class="section-title">
+                    <i class="fas fa-chevron-down"></i>
+                    Collaborations
+                </h2>
+                <div class="publication-card">
+                    <h3>Collaborations</h3>
+                    <div class="publication-list">
+                        <div class="publication">
+                            <p>Feng WW, Bang S, Takas EM, Day C, Crawford KJ, Al-Sheyab R, Almufarrej DB, Wells W, Ilchenko S, Kasumov T, Kon N, Novak CM, Hu W, Kurokawa M. (2023) Hepatic Huwe1 loss protects mice from non-alcoholic fatty liver disease through lipid metabolic rewiring. iScience 26 (12):108405. (PMID: 38047073; doi: 10.1016/j.isci.2023.108405)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S2589004223024823?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Oechsle CM, Showalter LE, Novak CM, Czerniecki BJ, Koski GK. (2020) Statin drugs plus Th1 cytokines potentiate apoptosis and ras delocalization in human breast cancer lines and combine with dendritic cell-based immunotherapy to suppress tumor growth in a mouse model of HER-2pos disease.: Vaccines (Basel), 8 (1): pii: E72. (PMID: 3204134; doi: 10.3390/vaccines8010072)</p>
+                            <a href="https://www.mdpi.com/2076-393X/8/1/72" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Brager AJ, Heemstra LA, Bhambra R, Ehlen JC, Esser K, Paul KN, and Novak CM (2017) Homeostatic effects of exercise and sleep on metabolic processes in mice with an overexpressed skeletal muscle clock. Biochimie, 132:161-165. (PMID: 27916643; doi: 10.1016/j.biochi.2016.11.014)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0300908416301948?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Remus JL, Stewart LT, Camp RM, Novak CM, Johnson JD (2015) Interaction of metabolic stress with chronic mild stress in altering brain cytokines and sucrose preference. Behavioral Neuroscience, 129 (3): 321-330. (PMID: 25914924)</p>
+                            <a href="https://psycnet.apa.org/record/2015-18249-001" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Zhu Z, Spicer EG, Gavini CK, Goudjo-Ako AJ, Novak CM, and Shi H (2014) Enhanced sympathetic activity in mice with brown adipose tissue transplantation (transBATation). Physiology & Behavior, 125: 21-29. (PMID: 24291381)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0031938413004058?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Walrand S, Short KR, Heemstra LA, Novak CM, Levine JA, Coenen-Schimke LM, and Nair KS (2014) Altered regulation of energy homeostasis in older rats in response to thyroid hormone administration. The FASEB Journal, 28 (3): 1499-1510 (PMID: 24344330)</p>
+                            <a href="https://faseb.onlinelibrary.wiley.com/doi/epdf/10.1096/fj.13-239806" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Zhang Y, Ge X, Heemstra LA, Smith JS, Ma H, Kasim N, Edwards PA, and Novak CM. (2012) Loss of FXR protects against diet-induced obesity and accelerates liver carcinogenesis in ob/ob mice. Molecular Endocrinology, 26 (2): 272-80. (PMID: 22261820)</p>
+                            <a href="https://academic.oup.com/mend/article/26/2/272/2614839?login=true" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Park YJ, Kim SC, Him J, Anakk S, Lee JM, Tseng HT, Yechoor V, Park J, Choi JS, Jang HC, Lee K-U, Novak CM, Moore DD, and Lee YK. (2011) Dissociation of diabetes and obesity in mice lacking orphan nuclear receptor small heterodimer partner. Journal of Lipid Research, 52 (12): 2234-2244. (PMID: 21949050)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0022227520408272?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Li T, Owsley E, Matozel M, Hsu P, Novak CM, and Chiang JYL (2010) Transgenic expression of CYP7A1 in the liver prevents high fat diet-induced obesity and insulin resistance in mice. Hepatology, 52 (2): 678-690. (PMID: 20623580)</p>
+                            <a href="https://journals.lww.com/hep/citation/2010/08000/transgenic_expression_of_cholesterol.29.aspx" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Escande C, Chini CCS, Nin V, Dykerhouse KM, Novak CM, Levine J, vanDeursen J, Gores GJ, Chen J, Lou Z, Chini EN. (2010) Deleted in breast cancer-1 (DBC1) is a physiological regulator of SIRT1 activity and is necessary for the development of high fat diet induced liver steatosis. Journal of Clinical Investigation, 120 (2): 545-558. (PMID: 20071779)</p>
+                            <a href="https://www.jci.org/articles/view/39319" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Conover CA, Mason MA, Levine JA, and Novak CM (2008) Metabolic consequences of PAPP-A deficiency in mice: exploring possible relationship to longevity phenotype. Journal of Endocrinology, 198 (3):599-605. (PMID: 18566100)</p>
+                            <a href="https://joe.bioscientifica.com/view/journals/joe/198/3/599.xml" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Barbosa MTP, Soares SM, Novak CM, Sinclair D, Levine JA, Aksoy P, and Chini EN (2007) The Enzyme CD38 (a NAD glycohydrolase, EC 3.2.2.5) is necessary for the induction of diet-induced obesity. The FASEB Journal, 21 (13): 3629-39. (PMID: 17585054)</p>
+                            <a href="https://faseb.onlinelibrary.wiley.com/doi/epdf/10.1096/fj.07-8290com" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Kiwaki K, Novak CM, Hsu DK, Liu F, and Levine JA (2007) Galectin-3 Stimulates Preadipocyte Proliferation and is Upregulated in Growing Adipose Tissue. Obesity, 1 (15) 32-39. (PMID: 17228029)</p>
+                            <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1038/oby.2007.526" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="publications-section" id="circadian-rhythms">
+            <div class="publications-content">
+                <h2 class="section-title">
+                    <i class="fas fa-chevron-down"></i>
+                    Circadian rhythms and behavior
+                </h2>
+                <div class="publication-card">
+                    <h3>Circadian Rhythms and Behavior</h3>
+                    <div class="publication-list">
+                        <div class="publication">
+                            <p>Ehlen JC, Novak CM, Karom MK, Gamble KL, and Albers HE. (2008) Interactions of GABA A receptor activation and light on period mRNA expression in the suprachiasmatic nucleus. Journal of Biological Rhythms, 23 (1): 16-25. (PMID: 18258754; doi: 10.1177/0748730407310785)</p>
+                            <a href="https://journals.sagepub.com/doi/epdf/10.1177/0748730407310785" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM, Ehlen JC, and Albers HE. (2008) Invited Review: Photic and nonphotic inputs to the diurnal circadian clock. Biological Rhythm Research, 39 (3): 291-304.</p>
+                            <a href="https://www.tandfonline.com/doi/abs/10.1080/09291010701683482" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM, Ehlen JC, Paul KN, Fukuhara C, and Albers HE. (2007) Light and GABA A receptor activation alter period mRNA levels in the SCN of diurnal Nile grass rats. European Journal of Neuroscience, 24: 2843-2852. (PMID: 17156208)</p>
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/17156208/" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM, Parfitt DB, Sisk CL, and Smale L. (2007) Associations between behavior, hormones, and Fos responses to novelty differ in pre-and post-pubertal grass rats. Physiology and Behavior, 90 (1): 125-136. (PMID: 17055541)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0031938406003994?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Ehlen JC, Novak CM, Karom MC, Gamble KA, Paul KN, and Albers HE (2006) GABA A receptor activation suppresses Period 1 mRNA and Period 2 mRNA in the suprachiasmatic nucleus during the mid-subjective day. European Journal of Neuroscience, 23: 3328-2236. (PMID: 16820022)</p>
+                            <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1460-9568.2006.04857.x" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM and Albers HE (2004) Novel phase-shifting effects of GABA A receptor activation in the suprachiasmatic nucleus of a diurnal rodent. American Journal of Physiology: Regulatory, Integrative and Comparative Physiology: 286 (5): R820-R825. "Editorial Focus" spotlights article. (PMID: 14656771)</p>
+                            <a href="https://journals.physiology.org/doi/epdf/10.1152/ajpregu.00575.2003" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM, Ehlen JC, Huhman KL, and Albers HE (2004) GABA B receptor activation in the suprachiasmatic nucleus of diurnal and nocturnal rodents. Brain Research Bulletin, 63 (6): 531-535. (PMID: 15249119)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0361923004001170?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM and Albers HE (2004) Circadian phase alteration by GABA and light differs in diurnal and nocturnal rodents during the day. Behavioral Neuroscience, 118 (3): 498-504. (PMID: 15174927)</p>
+                            <a href="https://psycnet.apa.org/record/2004-95232-006" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Gamble KL, Novak CM, and Albers HE (2004) Neuropeptide Y and N-methyl-D-aspartic acid interact within the suprachiasmatic nuclei to alter circadian phase. Neuroscience, 126 (3): 559-65. (PMID: 15183505)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S030645220400260X?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Paul KN, Gamble KL, Fukuhara C, Novak CM, Tosini G, and Albers HE (2003). Tetrodotoxin administration in the suprachiasmatic nucleus prevents NMDA-induced reductions in pineal melatonin without influencing Per1 and Per2 mRNA levels. European Journal of Neuroscience, 19 (10): 2808-14. (PMID: 15147314)</p>
+                            <a href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.0953-816X.2004.03387.x" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Gamble KL, Novak CM, Paul KN, and Albers HE (2003) Tetrodotoxin blocks the circadian effects of NMDA during the day but not at night. NeuroReport, 14 (4): 641-644. (PMID: 12657903)</p>
+                            <a href="https://journals.lww.com/neuroreport/abstract/2003/03240/tetrodotoxin_blocks_the_circadian_effects_of_nmda.24.aspx" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM and Albers HE (2002) N-methyl-D-aspartate microinjected into the suprachiasmatic nucleus mimics the phase-shifting effects of light in the diurnal Nile grass rat (Arvicanthis niloticus), Brain Research, 951 (2): 255-263. (PMID: 12270504)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0006899302031682?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM and Albers HE (2001) Localization of hypocretin-like immunoreactivity in the brain of the diurnal rodents, Arvicanthis niloticus. Journal of Chemical Neuroanatomy, 23: 49-58. (PMID: 11756009)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0891061801001442?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM, Harris JA, Smale L, and Nunez AA (2000) Suprachiasmatic nucleus projections to the paraventricular thalamic nucleus in nocturnal rats (Rattus norvegicus) and diurnal Nile grass rats (Arvicanthis niloticus). Brain Research, 874 (2): 147-157. (PMID: 10960599)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0006899300025725?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak C M, Smale L, and Nunez A A (2000) Rhythms in Fos expression in brain areas related to the sleep-wake cycle in the diurnal Arvicanthis niloticus. American Journal of Physiology, 287 (Regulatory, Integrative and Comparative Physiology): R1267-R1274. (PMID: 10801296)</p>
+                            <a href="https://journals.physiology.org/doi/epdf/10.1152/ajpregu.2000.278.5.R1267" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM and Nunez AA (2000) A sparse projection from the suprachiasmatic nucleus to the sleep active ventrolateral preoptic area in the rat. NeuroReport, 11 (1): 93-96. (PMID: 10683837)</p>
+                            <a href="https://journals.lww.com/neuroreport/abstract/2000/01170/a_sparse_projection_from_the_suprachiasmatic.19.aspx" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM, Smale L, and Nunez AA (1999) Fos expression in the sleep-active cell group of the ventrolateral preoptic area in the diurnal murid rodent, Arvicanthis niloticus. Brain Research, 818: 375-384. (PMID: 10082823)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0006899398013195?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Rose S, Novak CM, Mahoney MM, Nunez AA, and Smale L (1999) Fos expression within vasopressin-containing neurons in the suprachiasmatic nucleus of diurnal compared to nocturnal rodents. Journal of Biological Rhythms, 14 (1): 37-46. (PMID: 10036991)</p>
+                            <a href="https://journals.sagepub.com/doi/epdf/10.1177/074873099129000425" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak CM and Nunez AA (1998) Daily rhythms in Fos activity in the rat ventrolateral preoptic area and midline thalamic nuclei. American Journal of Physiology, 275 (Regulatory, Integrative and Comparative Physiology): R1620-R1626. (PMID: 9791082)</p>
+                            <a href="https://journals.physiology.org/doi/full/10.1152/ajpregu.1998.275.5.R1620?rfr_dat=cr_pub++0pubmed&url_ver=Z39.88-2003&rfr_id=ori%3Arid%3Acrossref.org" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Novak, CM and Nunez AA (1998) Tyrosine hydroxylase and/or L-amino acid decarboxylase-containing cells in the suprachasmatic nucleus of the Syrian hamster (Mesocricetus auratus). Journal of Chemical Neuroanatomy, 14: 87-94. (PMID: 9625353)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0891061897100199?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="publication">
+                            <p>Meek LR, Romeo R, Novak CM, and Sisk CL (1997) Actions of testosterone in pubertal and postpubertal male hamsters: Dissociation of effects on reproductive behavior and brain androgen receptor immunoreactivity. Hormones and Behavior, 31: 75-88. (PMID: 9109601)</p>
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0018506X97913714?via%3Dihub" target="_blank" class="publication-link">View Publication <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:cnovak13@kent.edu">cnovak13@kent.edu</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>330-672-2306 (office)</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-flask"></i>
+                        <span>330-672-2304 (lab)</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Office Hours: 8-9 AM most weekdays</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://www.google.com/maps/dir/41.3507422,-81.4169085/Cunningham+Hall,+Kent,+OH+44243/@41.248863,-81.5528191,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x8831252d616b1c21:0xf66fe36c46b943b!2m2!1d-81.3416045!2d41.145833?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">CHH A-328/330, Kent State University</a>
+                    </div>
+                </div>
+                <hr class="footer-divider">
+                <p class="copyright">&copy; 2024 NEAT Lab, Kent State University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add collapsible functionality
+            document.querySelectorAll('.section-title').forEach(title => {
+                // Set initial state
+                const list = title.nextElementSibling.querySelector('.publication-list');
+                title.classList.add('collapsed');
+                list.classList.remove('active');
+
+                title.addEventListener('click', () => {
+                    title.classList.toggle('collapsed');
+                    list.classList.toggle('active');
+                });
+            });
+
+            // Handle section navigation from URL hash
+            const hash = window.location.hash;
+            if (hash) {
+                const section = document.querySelector(hash);
+                if (section) {
+                    const title = section.querySelector('.section-title');
+                    const list = section.querySelector('.publication-list');
+                    title.classList.remove('collapsed');
+                    list.classList.add('active');
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    </script>
+</body>
+</html> 
